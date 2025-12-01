@@ -8,6 +8,29 @@ The project is structured using **idiomatic Go module layout** and is written us
 
 ---
 
+## 📌 Problem Statement  
+You are tasked with building a simplified **satellite image analyzer** to detect and analyze water bodies (e.g., lakes, rivers, flood zones) from satellite images.  
+
+The image is represented as an `m x n` binary grid:  
+- `0` = land  
+- `1` = water  
+
+Your analyzer should implement algorithms that:  
+1. **Count distinct water bodies, water bodies at border can still be considered distinct**  
+2. **Find the largest water body (by area)**  
+3. **Detect enclosed lakes** (water bodies not touching the grid border)  
+4. **Simulate flood risk zones** by expanding from border-connected water bodies  
+
+Input Grid:      Flood Risk Zones (neighbors_8)
+1 0 1            X 1 X
+0 0 0     =>     1 1 1
+1 0 1            X 1 X
+
+Connectivity is defined as **8-directional adjacency**:  
+- Horizontal: up, down  
+- Vertical: left, right  
+- Diagonal: top-left, top-right, bottom-left, bottom-right  
+
 ## 🚀 Features
 
 ### 1. Count distinct water bodies  
