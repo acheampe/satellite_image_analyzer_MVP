@@ -56,7 +56,8 @@ satellite_image_analyzer/
 │   └── analyzer/            # CLI entry point (main.go)
 │
 ├── internal/
-│   └── grid/                # Core algorithm implementations
+│   └── grid/
+│       ├── predicates.go     <-- add here
 │       ├── connectivity.go
 │       ├── floodfill.go
 │       ├── count_water.go
@@ -64,15 +65,12 @@ satellite_image_analyzer/
 │       ├── enclosed_lakes.go
 │       └── flood_risk.go
 │
-├── pkg/
-│   └── gridtools/           # Public utilities
-│
-├── TDD/                   # Test Driven Development
+├── TDD/
+│   ├── predicates_test.go    <-- TDD tests
 │   ├── connectivity_test.go
 │   ├── floodfill_test.go
 │   ├── count_water_test.go
 │   ├── enclosed_lakes_test.go
-│   ├── max_water_test.go
 │   └── flood_risk_test.go
 │
 ├── go.mod
